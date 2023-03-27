@@ -43,7 +43,7 @@ class _NewCongViecState extends State<NewCongViec> {
       minTime: DateTime(1900),
       maxTime: DateTime(3000),
       // khi người dùng nhập tiem trên DatePicker thì hàm callback Function OnConfirm sẽ gọi với tham số đã chọn 
-      // và cập nhật trạng thái
+
       onConfirm: (date) {
         setState(() {
           _selectedDate = date;
@@ -57,11 +57,9 @@ class _NewCongViecState extends State<NewCongViec> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      // elevation: 20,
       child: Container(
         padding: EdgeInsets.all(50),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             TextField(
               decoration: InputDecoration(labelText: 'Tên Công Việc'),
@@ -70,16 +68,13 @@ class _NewCongViecState extends State<NewCongViec> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-
-              
               children: <Widget>[
-                // Text(_selectedDate == null ? '' : 'Deadline: ${DateFormat('dd-MM-yyyy HH:mm:ss').format(_selectedDate!)}'),
                 SizedBox(width: 5),
                 Padding (
                    padding: const EdgeInsets.only( top: 20),
                   child :ElevatedButton(
                 
-                  child: Text('Chọn Thời Gian'),
+                  child: Text('Chọn Thời Gian '),
                   onPressed: _presentDateTimePicker,
                     style: ElevatedButton.styleFrom(
                 )
